@@ -1,0 +1,41 @@
+{
+  "name": "typescript-express-basic",
+  "version": "1.0.2",
+  "description": "Basic api concept using typescript for express",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vosonha89/typescript-express-basic.git"
+  },
+  "keywords": [
+    "express",
+    "express api",
+    "express typescript"
+  ],
+  "author": "vosonha89",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vosonha89/typescript-express-basic/issues"
+  },
+  "homepage": "https://github.com/vosonha89/typescript-express-basic#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.13",
+    "nodemon": "^3.1.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "reflect-metadata": "^0.2.2",
+    "tsyringe": "^4.8.0"
+  }
+}
