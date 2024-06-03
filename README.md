@@ -41,7 +41,7 @@ npm run test
 👤 **vosonha89**
 
 * Github: [@vosonha89](https://github.com/vosonha89)
-* LinkedIn: [@https:\/\/www.linkedin.com\/in\/vo-son-ha\/](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/vo-son-ha\/)
+* LinkedIn: [@https:\/\/www.linkedin.com\/in\/vo-son-ha\/](https:\/\/www.linkedin.com\/in\/vo-son-ha\/)
 
 ## 🤝 Contributing
 
