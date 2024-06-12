@@ -16,7 +16,7 @@
 
 > Basic api concept using typescript for express. 
 ```sh
-https://www.npmjs.com/package/express
+https://www.npmjs.com/package/typescript-express-basic
 ```
 
 ### 🏠 [Homepage](https://github.com/vosonha89/typescript-express-basic#readme)
