@@ -29,11 +29,41 @@ npm install express --save
 ```
 ### Install extend express basic
 ```sh
-npm i typescript-express-basic
+npm install typescript-express-basic --save
+```
+### Creating example controller
+#### Example file: https://github.com/vosonha89/typescript-express-basic/blob/main/test/src/controllers/publicController.ts
+```sh
+export class PublicController extends ApiController {
+    public controllerName = 'public';
+
+    @ApiRoute({
+        method: ApiMethod.GET,
+        path: '/get'
+    })
+    public get(req: Request, res: Response): void {
+        const id = req.query.id;
+        res.status(StatusCode.Ok);
+        res.send('Public get ' + id);
+    }
+}
+```
+### Register app & controllers
+#### Example file: https://github.com/vosonha89/typescript-express-basic/blob/main/test/src/index.ts
+```sh
+const port = 3000;
+let app = apiExpress;
+app.use(express.json());
+
+// Register controller
+app.registerController(new PublicController());
+
+app.listen(port, () => {
+    console.log(`[server]: Server is running at http://localhost:${port}`);
+});
 ```
 
 ## Run test project
-
 ```sh
 npm run test
 
