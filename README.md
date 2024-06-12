@@ -20,20 +20,24 @@
 
 ## Concept
 
-```sh
-
-```
+![alt text](https://raw.githubusercontent.com/vosonha89/typescript-express-basic/main/public/images/typescript-express-basic.jpg?raw=true)
 
 ## Install
-
+### Install express from https://expressjs.com/
 ```sh
-npm install
+npm install express --save
+```
+### Install extend express basic
+```sh
+npm i typescript-express-basic
 ```
 
-## Run tests
+## Run test project
 
 ```sh
 npm run test
+
+Link: http://localhost:3000
 ```
 
 ## Author

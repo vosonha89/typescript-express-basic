@@ -10,7 +10,7 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "npx tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cd test && npm install && npm start"
   },
   "repository": {
     "type": "git",
