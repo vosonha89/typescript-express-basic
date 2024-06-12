@@ -14,8 +14,10 @@
   </a>
 </p>
 
-> Basic api concept using typescript for express
-> NPM: https://www.npmjs.com/package/express
+> Basic api concept using typescript for express. 
+```sh
+https://www.npmjs.com/package/express
+```
 
 ### 🏠 [Homepage](https://github.com/vosonha89/typescript-express-basic#readme)
 ## Concept
