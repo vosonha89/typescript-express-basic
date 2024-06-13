@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
+    "build": "npx tsc",
     "dev": "nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2",
+    "express-jsdoc-swagger": "^1.8.0",
     "typescript-express-basic": "^1.0.2"
   },
   "devDependencies": {
