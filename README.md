@@ -33,6 +33,14 @@ npm install express --save
 ```sh
 npm install typescript-express-basic --save
 ```
+
+## Optionals:
+### Swagger UI
+#### Compatable with https://brikev.github.io/express-jsdoc-swagger-docs/#/README, included in the 'test' folder
+```sh
+https://brikev.github.io/express-jsdoc-swagger-docs/#/README
+```
+
 ### Creating example controller
 #### Example file: https://github.com/vosonha89/typescript-express-basic/blob/main/test/src/controllers/publicController.ts
 ```sh
