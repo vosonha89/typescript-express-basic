@@ -62,7 +62,7 @@ const apiExpress = express() as ApiExpress;
 apiExpress.registerController = (apiController: ApiController) => {
     let router = Router();
     const functions = Object.getPrototypeOf(apiController);
-    const functionNames = Object.getOwnPropertyNames(functions);
+    const functionNames = getAllMethodNames(functions);
     for (const name of functionNames) {
         if (name != 'constructor') {
             const functionImplementation = functions[name];
@@ -77,6 +77,29 @@ apiExpress.registerController = (apiController: ApiController) => {
     }
     apiExpress.use("/" + apiController.controllerName + "/", router);
 };
+
+
+const getAllMethodNames = (obj: AnyType) => {
+    let props: AnyType = [];
+    do {
+        const l = Object.getOwnPropertyNames(obj)
+            .concat(Object.getOwnPropertySymbols(obj).map(s => s.toString()))
+            .sort()
+            .filter((p, i, arr) =>
+                typeof obj[p] === 'function' &&  //only the methods
+                p !== 'constructor' &&           //not the constructor
+                (i == 0 || p !== arr[i - 1]) &&  //not overriding in this prototype
+                props.indexOf(p) === -1          //not overridden in a child
+            )
+        props = props.concat(l);
+    }
+    while (
+        (obj = Object.getPrototypeOf(obj)) &&   //walk-up the prototype chain
+        Object.getPrototypeOf(obj)              //not the the Object prototype methods (hasOwnProperty, etc...)
+    )
+
+    return props
+}
 
 /**
  * Verify permission
